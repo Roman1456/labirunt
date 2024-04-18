@@ -9,20 +9,23 @@ window = pygame.display.set_mode((700,500))
 fps = pygame.time.Clock()
 
 backround = pygame.transform.scale(
-    pygame.image.load("kartka/.png"),(700,500)
+    pygame.image.load("kartka/labirint.png"),(700,500)
 )
 
 niger = Player(626,425,50,50, "kartka/images.jpg", 10,50)
 peri = Peri(40,0,50,50, "kartka/images.png", 10)
 
 walls = []
-walls.append(Wall(100,0,700,20))
-walls.append(Wall(680,0,30,600))
-walls.append(Wall(0,480,600,20))
+walls.append(Wall(100,0,700,60))
+walls.append(Wall(675,0,30,600))
+walls.append(Wall(0,440,610,60))
 walls.append(Wall(0,0,30,600))
-walls.append(Wall(540,390,150,20))
-walls.append(Wall(20,300,100,20))
-
+walls.append(Wall(220,60,15,165))
+walls.append(Wall(95,210,200,15))
+walls.append(Wall(95,140,70,15))
+walls.append(Wall(95,140,15,80))
+walls.append(Wall(30,285,60,15))
+walls.append(Wall(155,220,15,70))
 
 
 
