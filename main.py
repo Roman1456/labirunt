@@ -9,7 +9,7 @@ window = pygame.display.set_mode((700,500))
 fps = pygame.time.Clock()
 
 backround = pygame.transform.scale(
-    pygame.image.load("kartka/labirint.png"),(700,500)
+    pygame.image.load("kartka/.png"),(700,500)
 )
 
 niger = Player(626,425,50,50, "kartka/images.jpg", 10,50)
