@@ -26,9 +26,9 @@ walls.append(Wall(95,140,70,15))
 walls.append(Wall(95,140,15,80))
 walls.append(Wall(30,285,60,15))
 walls.append(Wall(155,220,15,70))
-
-
-
+walls.append(Wall(280,220,15,75))
+walls.append(Wall(220,280,70,15))
+walls.append(Wall(220,280,15,70))
 
 
 
