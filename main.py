@@ -13,23 +13,25 @@ backround = pygame.transform.scale(
 )
 
 niger = Player(626,425,50,50, "kartka/images.jpg", 10,50)
-peri = Peri(40,0,50,50, "kartka/images.png", 10)
+peri = Peri(40,0,40,40, "kartka/images.png", 10)
 
 walls = []
 walls.append(Wall(100,0,700,60))
 walls.append(Wall(675,0,30,600))
 walls.append(Wall(0,440,610,60))
 walls.append(Wall(0,0,30,600))
-walls.append(Wall(220,60,15,165))
-walls.append(Wall(95,210,200,15))
-walls.append(Wall(95,140,70,15))
-walls.append(Wall(95,140,15,80))
-walls.append(Wall(30,285,60,15))
-walls.append(Wall(155,220,15,70))
-walls.append(Wall(280,220,15,75))
-walls.append(Wall(220,280,70,15))
-walls.append(Wall(220,280,15,70))
-
+walls.append(Wall(220,60,10,160))
+walls.append(Wall(95,210,195,10))
+walls.append(Wall(95,140,70,10))
+walls.append(Wall(95,140,10,80))
+walls.append(Wall(30,285,60,10))
+walls.append(Wall(155,220,10,70))
+walls.append(Wall(280,220,10,70))
+walls.append(Wall(220,280,70,10))
+walls.append(Wall(220,280,10,80))
+walls.append(Wall(105,350,125,10))
+walls.append(Wall(285,370,10,100))
+walls.append(Wall(410,60,10,80))
 
 
 game = True
