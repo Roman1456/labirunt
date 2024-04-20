@@ -9,7 +9,7 @@ window = pygame.display.set_mode((700,500))
 fps = pygame.time.Clock()
 
 backround = pygame.transform.scale(
-    pygame.image.load("kartka/labirint.png"),(700,500)
+    pygame.image.load("kartka/download.jpg"),(700,500)
 )
 
 niger = Player(626,425,50,50, "kartka/images.jpg", 10,50)
@@ -32,6 +32,21 @@ walls.append(Wall(220,280,10,80))
 walls.append(Wall(105,350,125,10))
 walls.append(Wall(285,370,10,100))
 walls.append(Wall(410,60,10,80))
+walls.append(Wall(410,350,10,100))
+walls.append(Wall(350,350,130,10))
+walls.append(Wall(350,300,10,50))
+walls.append(Wall(475,290,10,70))
+walls.append(Wall(410,290,135,10))
+walls.append(Wall(410,215,10,80))
+walls.append(Wall(535,140,10,150))
+walls.append(Wall(350,215,70,10))
+walls.append(Wall(350,140,10,80))
+walls.append(Wall(290,140,70,10))
+walls.append(Wall(475,140,135,10))
+walls.append(Wall(475,140,10,75))
+walls.append(Wall(545,360,135,10))
+walls.append(Wall(600,215,130,10))
+walls.append(Wall(600,215,10,75))
 
 
 game = True
@@ -58,7 +73,7 @@ while game:
     for wall in walls:
         wall.draw(window)
     peri.move()
-    #niger.move()
+    niger.move()
     peri.draw(window)
     niger.draw(window)
     pygame.display.flip()

@@ -6,6 +6,6 @@ class Wall:
         self.rect = pygame.Rect(x,y,w,h)
 
     def draw(self,window):
-        pygame.draw.rect(window,(255,255,0),self.rect)
+        pygame.draw.rect(window,(0,0,0),self.rect)
 
 
