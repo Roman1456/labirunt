@@ -3,6 +3,13 @@ from pygame import *
 from Player import Player
 from Player1 import Peri
 from Walld import Wall
+from Win import Win
+from Lose import Lose
+pygame.init()
+pygame.font.init()
+pygame.mixer.init()
+mixer.music.load("")
+pygame.mixer.music.play(-1)
 
 
 window = pygame.display.set_mode((700,500))
@@ -12,8 +19,11 @@ backround = pygame.transform.scale(
     pygame.image.load("kartka/download.jpg"),(700,500)
 )
 
-niger = Player(626,425,50,50, "kartka/images.jpg", 10,50)
-peri = Peri(40,0,40,40, "kartka/images.png", 10)
+niger = Player(50,425,50,50, "kartka/images.jpg", 10,50)
+peri = Peri(40,23,40,40, "kartka/images.png", 5)
+win = Win(620,440,50,50,"kartka/green.png")
+lose = Lose(490,160,40,40,"kartka/green.png")
+
 
 walls = []
 walls.append(Wall(100,0,700,60))
@@ -48,9 +58,15 @@ walls.append(Wall(545,360,135,10))
 walls.append(Wall(600,215,130,10))
 walls.append(Wall(600,215,10,75))
 
-
+font = pygame.font.Font(None, 50)
 game = True
 while game:
+
+
+
+
+
+
     for event in pygame.event.get():
         if event.type == pygame.MOUSEBUTTONDOWN:
             print(pygame.mouse.get_pos())
@@ -74,7 +90,19 @@ while game:
         wall.draw(window)
     peri.move()
     niger.move()
+    lose.draw(window)
+    win.draw(window)
     peri.draw(window)
     niger.draw(window)
+    if lose.hitbox.colliderect(peri.hitbox):
+        text_surface = font.render("Програв", True,(234, 126, 47))
+        window.blit(text_surface, [310,24])
+        pygame.display.flip()
+
+    if win.hitbox.colliderect(peri.hitbox):
+        text_surface = font.render("Виграв", True,(234, 126, 47))
+        window.blit(text_surface, [310,24])
+        pygame.display.flip()
+
     pygame.display.flip()
     fps.tick(60)
