@@ -60,7 +60,9 @@ while game:
 
     for wall in walls:
         if wall.rect.colliderect(peri.hitbox):
-            game = False
+            game=False
+
+
 
 
 
