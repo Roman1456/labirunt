@@ -8,8 +8,8 @@ from Lose import Lose
 pygame.init()
 pygame.font.init()
 pygame.mixer.init()
-mixer.music.load("")
-pygame.mixer.music.play(-1)
+#mixer.music.load("")
+#spygame.mixer.music.play(-1)
 
 
 window = pygame.display.set_mode((700,500))
